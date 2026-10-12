@@ -1,0 +1,23 @@
+# The private CapitalEngine repo pushes release/api-<version> branches here. This opens the PR; merging it publishes.
+name: Open release PR
+on:
+  push:
+    branches: ["release/api-*"]
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Binaries only, never source
+        run: |
+          bad=$(find . -path ./.git -prune -o -type f \( -name '*.java' -o -name '*.kt' -o -name '*.kts' -o -name '*.sql' -o -name '*.class' \) -print; find . -path ./.git -prune -o -type d -name 'src-html' -print)
+          [ -z "$bad" ] || { echo "::error::source-like files found:"; echo "$bad"; exit 1; }
+      - name: Open the PR
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          version="${GITHUB_REF_NAME#release/api-}"
+          gh pr create --base main --head "$GITHUB_REF_NAME" --title "API $version" \
+            --body "Automated release of API $version from the private repository. Merging publishes it to the Maven repo and Javadoc, and tags v$version."

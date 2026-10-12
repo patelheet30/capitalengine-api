@@ -1,0 +1,24 @@
+name: Tag release
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  tag:
+    if: github.event.pull_request.merged && startsWith(github.event.pull_request.head.ref, 'release/api-')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ github.event.pull_request.merge_commit_sha }}" }
+      - name: GitHub Release v<version> with the binaries
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          version="${{ github.event.pull_request.head.ref }}"; version="${version#release/api-}"
+          dir="m2/com/patelheet/capitalengine-api/$version"
+          flags=""; case "$version" in *-*) flags="--prerelease";; esac
+          gh release create "v$version" $flags --target "${{ github.event.pull_request.merge_commit_sha }}" --title "API $version" \
+            --notes "Maven: \`com.patelheet:capitalengine-api:$version\`. Javadoc: https://patelheet30.github.io/capitalengine-api/docs/$version/" \
+            "$dir/capitalengine-api-$version.jar" "$dir/capitalengine-api-$version-javadoc.jar"
+          git push origin --delete "${{ github.event.pull_request.head.ref }}" || true

@@ -1,0 +1,12 @@
+name: Binaries only
+on: pull_request
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          bad=$(find . -path ./.git -prune -o -type f \( -name '*.java' -o -name '*.kt' -o -name '*.kts' -o -name '*.sql' -o -name '*.class' \) -print; find . -path ./.git -prune -o -type d -name 'src-html' -print)
+          [ -z "$bad" ] || { echo "::error::source-like files found:"; echo "$bad"; exit 1; }
