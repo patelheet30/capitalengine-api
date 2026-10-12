@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.patelheet",
+    "module": "capitalengine-api",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "capitalengine-api-1.0.0.jar",
+          "url": "capitalengine-api-1.0.0.jar",
+          "size": 24483,
+          "sha512": "1487982ddcfa0b0c1b071c7e7e14a9d5b1d743b286139878b3557d168fa52718a9bd847d062a4f5d247bd758489d35e629f97ec59e32272ba3936b6ebf2baf91",
+          "sha256": "583ddffd4e9ddc567e21fa9b5b35ed8e8a37c844c84f1d6ac0eb298dd6eb33b5",
+          "sha1": "bd296f21a4c53df713d331c99ba2a0babe90be0b",
+          "md5": "24a2ced4e75a147af6da5d26d4b1f88b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "capitalengine-api-1.0.0.jar",
+          "url": "capitalengine-api-1.0.0.jar",
+          "size": 24483,
+          "sha512": "1487982ddcfa0b0c1b071c7e7e14a9d5b1d743b286139878b3557d168fa52718a9bd847d062a4f5d247bd758489d35e629f97ec59e32272ba3936b6ebf2baf91",
+          "sha256": "583ddffd4e9ddc567e21fa9b5b35ed8e8a37c844c84f1d6ac0eb298dd6eb33b5",
+          "sha1": "bd296f21a4c53df713d331c99ba2a0babe90be0b",
+          "md5": "24a2ced4e75a147af6da5d26d4b1f88b"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "capitalengine-api-1.0.0-javadoc.jar",
+          "url": "capitalengine-api-1.0.0-javadoc.jar",
+          "size": 197951,
+          "sha512": "7ea728c433322c69cbe0c7731403034fa5ed3e74c3a1024831d88365b351b23e0072a6cfbd7ff3fcf79acd94bdc6c740af4a18ccf3ab8d0b653779c04b086039",
+          "sha256": "49c0c4c137e687a0eca9c6e5d2802388b00f6c1ef65c5b514a01ef86cfbd4a40",
+          "sha1": "609ddc577505edce1efc6b05538f0ec3b6ad6397",
+          "md5": "fbf3ea06663c15c454bd61d244cd871d"
+        }
+      ]
+    }
+  ]
+}
