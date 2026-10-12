@@ -1,0 +1,148 @@
+CapitalEngine API Licence
+Version 1.0
+
+Copyright (c) 2026 Heet Patel. All rights reserved.
+
+This licence applies to the CapitalEngine API ("the API"). The API is the
+artifact published as com.patelheet:capitalengine-api, which includes its
+compiled classes and its Javadoc. It does not apply to CapitalEngine itself
+or to any CapitalEngine add-on plugin. Those are proprietary and are covered
+by separate terms.
+
+"Licensor" means Heet Patel (patelheet.com). "You" means the person or
+organisation using the API. "Your Plugin" means software you create that
+uses the API to work with CapitalEngine.
+
+
+1. WHAT YOU MAY DO
+
+   The Licensor grants you a free, worldwide, non-exclusive,
+   non-transferable licence to:
+
+   a) Download the API and its Javadoc, and use them to develop, compile and
+      test Your Plugin.
+
+   b) Declare the API as a compile-time dependency of Your Plugin (for
+      example, Gradle "compileOnly" or Maven "provided").
+
+   c) Distribute Your Plugin, for free or for payment, under any licence you
+      choose, including open source and closed source, as long as you follow
+      section 2.
+
+   d) Implement the interfaces that the API documents as intended for plugins
+      to implement (currently MonetaryPolicy and IndicatorProvider), and
+      listen to the API's events.
+
+   e) Create mock or stub implementations of any API interface. These may
+      only be used in your own automated tests, and must not be shipped as
+      part of Your Plugin.
+
+   f) Keep copies of the API in your build tools, caches, private
+      repositories and CI systems, so that you can do the above.
+
+   g) Quote short parts of the Javadoc in Your Plugin's documentation where
+      it helps explain how Your Plugin works with CapitalEngine.
+
+
+2. WHAT YOU MAY NOT DO
+
+   a) You may not include, shade or bundle the API's classes inside Your
+      Plugin or any other distributed software. At runtime, CapitalEngine
+      provides the API.
+
+   b) You may not publish or share the API jar or its Javadoc yourself, for
+      example by uploading them to a public repository, website or file
+      share. Section 1(f) covers private copies.
+
+   c) You may not modify the API, or distribute modified versions of it.
+
+   d) You may not implement the CapitalApi interface, or otherwise create
+      software that replaces, imitates or substitutes for CapitalEngine or
+      any of its add-ons, except for test-only mocks under section 1(e).
+
+   e) You may not decompile, disassemble or reverse engineer the API, except
+      where applicable law allows it despite this restriction.
+
+   f) You may not remove or change any copyright or licence notices in the
+      API.
+
+
+3. NAMES
+
+   This licence does not give you any rights to the names "CapitalEngine",
+   "CapitalMarket", "CapitalBank", "CapitalDashboard", "CapitalTrade" or
+   "patelheet". You may say factually that Your Plugin is "for
+   CapitalEngine" or "compatible with CapitalEngine". You may not suggest
+   that the Licensor made, endorses or supports Your Plugin unless the
+   Licensor has agreed to this in writing.
+
+
+4. YOUR PLUGIN
+
+   You own Your Plugin. The Licensor claims no rights to it. You are solely
+   responsible for Your Plugin and for how it uses the API, including any
+   money it creates or moves on a server.
+
+
+5. VERSIONS
+
+   Each released version of the API is covered by the licence included
+   inside that version's jar. The Licensor may offer future versions of the
+   API under different terms. Any change does not affect a version you have
+   already received.
+
+
+6. TERMINATION
+
+   a) This licence ends automatically if you break any of its terms.
+
+   b) If you fix the breach within 30 days of becoming aware of it, your
+      licence is restored as if it had never ended.
+
+   c) If your licence ends and is not restored, then from that point you
+      must:
+      - stop using the API; and
+      - stop distributing Your Plugin, because it depends on the API.
+
+   d) Copies of Your Plugin that other people received before your licence
+      ended are not affected. They may keep using those copies.
+
+   e) Sections 4, 7, 8, 9 and 10 still apply after this licence ends.
+
+
+7. NO WARRANTY
+
+   THE API IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+
+8. LIMITATION OF LIABILITY
+
+   TO THE FULLEST EXTENT ALLOWED BY LAW, THE LICENSOR IS NOT LIABLE FOR ANY
+   CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE API OR ITS USE. THIS
+   INCLUDES LOSS OF DATA, LOSS OF IN-GAME BALANCES AND LOSS OF PROFITS,
+   WHETHER IN CONTRACT, TORT OR OTHERWISE.
+
+   Nothing in this licence limits or excludes any liability that cannot be
+   limited or excluded by law. This includes liability for death or
+   personal injury caused by negligence, and liability for fraud.
+
+
+9. GOVERNING LAW
+
+   This licence, and any dispute or claim arising out of or in connection
+   with it or its subject matter, is governed by the law of England and
+   Wales. This includes non-contractual disputes or claims. The courts of
+   England and Wales have exclusive jurisdiction over any such dispute or
+   claim.
+
+
+10. EVERYTHING ELSE
+
+   All rights not expressly granted by this licence are reserved by the
+   Licensor. If any part of this licence cannot be enforced, the rest still
+   applies.
+
+   For permissions beyond this licence, contact the Licensor through
+   patelheet.com.
